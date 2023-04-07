@@ -1,3 +1,19 @@
+/* For PC */
+@media only screen and (min-width: 768px) {
+  pre {
+    min-width: 500px; /* set width for PC */
+    max-width: 1000px;
+  }
+}
+
+/* For mobile */
+@media only screen and (max-width: 767px) {
+  pre {
+    width: 80%; /* set full width for mobile */
+  }
+}
+
+
 body {
     background-color: #414141;
     display: flex;
@@ -16,8 +32,6 @@ pre {
     background: none;
     width: calc();
     color: white;
-    min-width: 300px;
-    max-width: 1000px;
     border: 1px solid #CA3E47;
     padding: 5px;
     text-align: left !important;
