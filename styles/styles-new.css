@@ -18,7 +18,7 @@ textarea {
     border-color: #CA3E47;
     width: calc();
     color: white;
-    min-width: 500px;
+    min-width: 300px;
     max-width: 1000px;
     padding: 5px;
 }
