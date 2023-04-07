@@ -1,3 +1,18 @@
+/* For PC */
+@media only screen and (min-width: 768px) {
+  textarea {
+    min-width: 500px; /* set width for PC */
+    max-width: 1000px;
+  }
+}
+
+/* For mobile */
+@media only screen and (max-width: 767px) {
+  textarea {
+    width: 80%; /* set full width for mobile */
+  }
+}
+
 body {
     background-color: #414141;
     display: flex;
@@ -18,8 +33,6 @@ textarea {
     border-color: #CA3E47;
     width: calc();
     color: white;
-    min-width: 300px;
-    max-width: 1000px;
     padding: 5px;
 }
 
