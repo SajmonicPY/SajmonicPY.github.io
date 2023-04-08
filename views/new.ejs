@@ -1,37 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PasteLab - New</title>
-  <link rel="stylesheet" href="/styles-new.css">
-  <link rel="icon" type="image/png" href="https://i.ibb.co/YLqP3wH/image-removebg-preview.png"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/6.0.1/autosize.min.js" integrity="sha512-OjjaC+tijryqhyPqy7jWSPCRj7fcosu1zreTX1k+OWSwu6uSqLLQ2kxaqL9UpR7xFaPsCwhMf1bQABw2rCxMbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
-<body>
-  <div class="container">
-    <form action='/save' method='POST'>
-      <div class="input-container">
-        <input class="optionalinput" type="text" name="customId" id="customId" placeholder="Custom Title (optional):" value="<%= locals.customId %>">
-      </div>
-      <textarea autofocus name="value" id="value"><%= locals.value %></textarea>
-      <button class="button" type="submit">Share</button>
-    </form>
-  </div>
-  <script>
-    const customIdInput = document.querySelector('#customId');
-    customIdInput.addEventListener('focus', function() {
-      customIdInput.placeholder = '';
-      customIdInput.parentElement.querySelector('label').style.display = 'none';
-    });
-    customIdInput.addEventListener('blur', function() {
-      customIdInput.placeholder = 'Custom Title (optional):';
-      if (!customIdInput.value) {
-        customIdInput.parentElement.querySelector('label').style.display = 'block';
-      }
-    });
-    autosize(document.querySelector('textarea'));
-  </script>
-</body>
-</html>
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #0A1828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    font-family: monaco, monospace;
+    resize: none;
+    font-size: larger;
+    border-radius: 8px;
+    min-height: 30rem;
+    width: 100%;
+    background: #0A1828;
+    border-color: #BFA181;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+button {
+    font-family: monaco, monospace;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #BFA181;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #178582;
+    box-shadow: 0 12px 16px 0 black, 0 17px 50px 0 black;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.container {
+  margin: 1rem;
+  width: 100%;
+  max-width: 40rem;
+}
+
+input {
+  background: transparent;
+  width: 100%;
+  border-color: #BFA181;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-container {
+  width: 80%;
+}
+
+::placeholder {
+  color: rgb(171, 171, 171);
+  font-family: monaco, monospace;
+  font-size: 16px;
+
+}
+
+.optionalinput {
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.75)
+}
+
