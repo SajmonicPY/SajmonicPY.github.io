@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100svh;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -17,8 +17,8 @@ textarea {
     resize: none;
     font-size: larger;
     border-radius: 8px;
-    height: 80svh;
-    width: 70svh;
+    height: 80vh;
+    width: 70vw;
     background: #0A1828;
     border-color: #BFA181;
     color: rgba(255, 255, 255, 0.75);
